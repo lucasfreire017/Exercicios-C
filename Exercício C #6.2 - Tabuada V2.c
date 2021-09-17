@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-// azer um programa em C que imprime uma tabela com a tabuada de 1 a 10 utilizando um comando de loop for(....).
+// Fazer um programa em C que imprime uma tabela com a tabuada de 1 a 10 utilizando um comando de loop for(....).
 
 int main(){
     // Declaração e input de variavel
