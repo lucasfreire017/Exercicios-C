@@ -31,6 +31,17 @@ int main(){
     while ((fgets(frase, sizeof(frase), file)) != NULL){
         
         printf("%s", frase);
+
+        int len = strlen(frase);
+        int cont;
+        for (cont = 0; cont < len; cont++) {	
+            if (frase[i] == ',') {
+                frase[i] = '.';
+                break;			
+            }
+        }
+        
+
         media += atof(frase);
         total += atof(frase);
         i++;
@@ -50,3 +61,6 @@ int main(){
     system("pause");
     return 0;
 }
+
+
+
