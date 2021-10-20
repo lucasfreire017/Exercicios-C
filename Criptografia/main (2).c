@@ -1,6 +1,16 @@
-#include <stdio.h>
-#include<string.h>
+ #include<stdio.h>
 #include<stdlib.h>
+#include<conio.h>
+#include<string.h>
+#define tam 25
+#define tam2 11
+typedef struct{
+        char palavra[tam];
+        char cpf[tam2];
+}dados;
+void criptografa(dados *cripto);
+void descriptografar(dados *cripto);
+
 void chave ()
     {
     char CHAVE[]="StUvWxYz";
@@ -111,6 +121,7 @@ int main()
     scanf("%d", &resposta);
     if(resposta==1)
         {
+            
             Criptografar();
         }
     else if(resposta==2)
