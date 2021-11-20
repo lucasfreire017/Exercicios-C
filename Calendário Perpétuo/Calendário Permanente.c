@@ -6,10 +6,10 @@ int main()
     int a=0; // armazena ano
     int d=0; // armazena dia 
     int cont; // contador
-    int dias=0;
-    int x=3;
-    int res;
-    char meses[13] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+    int dias=0; // contagem dos dias vencidos do ano 
+    int x=3; // ponto de partida considerando o dia 01 de janeiro de 1901
+    int res; // resultado dos calculos  
+    char meses[13] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31}; // vetor representa dias dos meses do ano 
  
     printf("-=-=-=- Vamos verificar qual dia da semana seria sua data -=-=-=-\n\n");
     printf("Digite um dia que deseja verificar: "); 
@@ -62,6 +62,10 @@ int main()
             printf("Dia invalido\n");
             return 0; // interrompe o programa
         }
+        if(m<3) // aplicado uma correção para anos bissextos 
+        {
+            x=x-1;
+        }
     }
     else // caso o ano não seja bissexto
     {
@@ -74,8 +78,8 @@ int main()
         }
     }
 
- int ano = a - 1901; // para ano não bissexto
- int ano_bi = ano/4; // para ano bissexto
+ int ano = a - 1901; // contagem dos anos vencidos 
+ int ano_bi = ano/4; // contagem dos anos bissextos 
 
 // -=-=-=- Análise de dia da semana -=-=-=-
 
@@ -83,9 +87,9 @@ int main()
      {
          dias=dias + meses[cont];
      } 
-     res =(x + d + ano%7 + ano_bi%7 + dias%7) %7;
+     res =(x + d + ano%7 + ano_bi%7 + dias%7) %7; // calculo dos valores coletados 
     
-        if (res == 0) printf("O dia verificado foi ====> Sábado");
+        if (res == 0) printf("O dia verificado foi ====> Sabado");
     
     else
         if (res == 1) printf("O dia verificado foi ====> Domingo");
@@ -94,7 +98,7 @@ int main()
         if (res == 2) printf("O dia verificado foi ====> Segunda");
     
     else
-        if (res == 3) printf("O dia verificado foi ====> Terça");
+        if (res == 3) printf("O dia verificado foi ====> Terca");
     
     else
         if (res == 4) printf("O dia verificado foi ====> Quarta");
