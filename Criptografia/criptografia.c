@@ -46,7 +46,7 @@ int main()
             {
               fscanf(contc, "%c", &d);
               cont++;}
-            cont--;}
+        cont--;}
         
         
         // Criação da chave do arquivo a partir de um ID maior que 0 e menor igual a 1000 e do número de caracteres do arquivo mensagem.txt
